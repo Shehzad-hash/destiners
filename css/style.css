@@ -1,0 +1,707 @@
+:root {
+    --theme-color: #1057EF;
+    --green-fontcolor: #2ACBBC;
+    --bg-color: #1B8379;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.main-header {
+    padding: 0.7em 1.5em;
+}
+
+.main-header .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header a {
+    text-decoration: none;
+}
+
+.main-header .header-text {
+    color: #818181;
+    font-weight: 500;
+}
+
+/* destiners navbar */
+.destiners-navbar {
+    background-color: #D9E9E8;
+    ;
+}
+
+.destiners-navbar .header-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-links .link {
+    text-decoration: none;
+    color: var(--theme-color);
+    font-weight: 600;
+    transition: 200ms ease-in-out;
+}
+
+.header-links .link.active,
+.header-links .link:hover {
+    color: #818181;
+}
+
+/* Hero section */
+.hero-section {
+    padding: 2em;
+}
+
+.hero-section .links2 .link2 {
+    color: black;
+    text-decoration: none;
+}
+
+.hero-section .links2 .link2.active {
+    font-weight: 600;
+}
+
+.main-heading {
+    color: black;
+    font-size: 1.9em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.sub-heading {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 600;
+}
+
+.main-text {
+    color: #444444;
+}
+
+.hero-section .text {
+    color: #818181;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+/* Customize the label (the container) */
+.custom-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 10em;
+}
+
+/* Hide the browser's default checkbox */
+.custom-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-container input:checked~.checkmark {
+    background-color: var(--theme-color)
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 8px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hero-section .check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sub-heading.blue {
+    color: var(--theme-color);
+    text-align: center;
+    margin-top: 1.7em;
+    font-size: 1.7em;
+}
+
+.check .main-text {
+    font-size: 0.8em;
+}
+
+.hero-section .workshop {
+    display: flex;
+    align-items: center;
+}
+
+.workshop .workshop-img {
+    width: 3em;
+}
+
+.workshop .workshop-text {
+    font-size: 0.9em;
+    line-height: 1.3;
+    color: #444444;
+    ;
+}
+
+.my-tab {
+    background-color: #EAEAEA;
+    ;
+    padding-bottom: 1.8em;
+    padding-top: 0.5em;
+    display: none;
+}
+
+.my-tab.tab-1 {
+    display: block;
+}
+
+.tabs-btn {
+    margin-bottom: 0.3em;
+}
+
+.tabs-btn .tab-btn {
+    background-color: #94A09F;
+    padding: 0.3em 0.7em;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-right: 1.8px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    border-top: 4px solid #94A09F;
+}
+
+.tabs-btn .tab-btn.active {
+    background-color: white;
+    color: var(--theme-color);
+    font-weight: 500;
+    border-top: 4px solid var(--green-fontcolor);
+}
+
+.my-tab .tab-heading {
+    font-weight: 600;
+    color: #444444;
+}
+
+.tab-content .bullets-text {
+    color: #444444;
+    margin-bottom: 0.9em;
+    margin-top: 1em;
+}
+
+.tab-content .bullets-text::before {
+    content: "";
+    background-color: #1057EF;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.8em;
+    margin-top: -0.2em;
+
+}
+
+/* Form */
+.car-form {
+    background-color: #D9E9E8;
+    border-radius: 5px;
+    padding: 1.3em 0.8em;
+}
+
+.car-form .form-heading {
+    color: #060606;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.car-form .form-text-1 {
+    color: #444444;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.car-form .form-text-2 {
+    color: #818181;
+}
+
+.car-form .car-type {
+    width: 15.6em;
+}
+
+.car-form .form-blue-text {
+    color: var(--theme-color);
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.car-form .form-green-text {
+    color: var(--bg-color);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.car-form .form-text-3 {
+    color: #94A09F;
+}
+
+.car-form .form-text-3.text-3 {
+    font-size: 0.9em;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.6em 0.5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    margin-top: 1em;
+    color: #818181;
+    outline: none;
+}
+.form-select.custom-select {
+    -webkit-appearance: none;
+    background-image: url('../img/arrow-down.png');
+    background-position: 96%;
+    background-repeat: no-repeat;
+    background-size: 4%;
+    height: 2.9em;
+}
+.form-dots {
+    display: flex;
+    padding-top: 2em;
+    padding-bottom: 5em;
+}
+
+.form-dots .dot {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #C1C7D0;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5.5em;
+    cursor: pointer;
+}
+.form-dots .dot.active {
+    border: 5px solid var(--theme-color);
+}
+.car-form .form-text-1.text-1 {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.car-form .car-form-link {
+    color: var(--green-fontcolor);
+    margin-left: 0.3em;
+}
+
+.car-form .checkbox-text {
+    color: #444444;
+    ;
+}
+
+.car-form .car-form-btn {
+    color: white;
+    font-weight: 500;
+    background-color: var(--theme-color);
+    padding: 0.5em 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.car-form .car-form-btn:hover {
+    transform: scale(0.98);
+}
+
+.car-form .form-footer-text {
+    color: #444444;
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Cards Section */
+.cards-section {
+    padding: 2em;
+    padding-bottom: 4.5em;
+}
+
+.car-card {
+    background: #D9E9E8;
+    border-radius: 14px;
+    padding: 1em;
+    margin-top: 2em;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: grab;
+}
+.cards-section .car-type {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.8em;
+    display: inline-block;
+    margin-bottom: 3em;
+}
+
+.car-card .car-model {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.car-card .car-card-text {
+    color: #818181;
+    font-size: 0.8em;
+}
+
+.car-card .car-type img {
+    width: 0.8em !important;
+}
+
+.car-card .car-card-btn {
+    background-color: var(--bg-color);
+    padding: 0.6em 1.4em;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid var(--bg-color);
+    transition: 300ms ease-in-out;
+}
+.car-card .car-card-btn:hover{
+    color: var(--bg-color);
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 1px solid var(--bg-color);
+}
+.car-card .price {
+    color: var(--theme-color);
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.car-card .car-name {
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.card-tag {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    text-align: center;
+}
+
+.card-tag .tag-text {
+    color: white;
+    font-size: 0.7em;
+    position: absolute;
+    line-height: 1.2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+}
+.car-card .card-car {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cards-section .owl-carousel .owl-item img {
+    display: unset;
+    width: unset;
+}
+
+.blue-btn {
+    color: white;
+    font-weight: 500;
+    line-height: 2.3;
+    width: 17em;
+    height: 2.5em;
+    text-decoration: none !important;
+    border-radius: 5px;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+    transition: 200ms ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.blue-btn:hover {
+    color: var(--theme-color);
+    background-color: white;
+    border: 1px solid var(--theme-color);
+}
+
+/* Details Section */
+.details-section {
+    padding: 5em 0;
+    background-image: url('../img/details-section-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    position: relative;
+}
+
+.details-main-heading {
+    color: white;
+}
+
+.details-sub-heading {
+    color: var(--green-fontcolor);
+    font-size: 1.2em;
+}
+
+.details-section .circle {
+    color: var(--theme-color);
+    font-size: 2.5em;
+    font-weight: 600;
+    background-color: white;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    line-height: 2.1;
+    border-radius: 50%;
+    border: 8px solid rgba(42, 203, 188, 0.7);
+    margin-bottom: 1em;
+}
+
+.details-section .detail-heading {
+    color: white;
+}
+
+.details-section .detail-text {
+    color: white;
+}
+
+.details-section .numbers-card {
+    margin-top: 5em;
+    padding: 0 2.5em;
+}
+
+.line {
+    border: 1px dashed rgba(42, 203, 188, 0.7);
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 57em;
+    transform: translate(-50%, -50%);
+}
+
+/* Middle Section */
+.middle-section {
+    padding: 3em 0;
+}
+
+.middle-section .middle-text {
+    color: #444444;
+    font-weight: 600;
+    margin-bottom: 2.2em;
+}
+
+/* Contact section */
+.contact-section {
+    background-image: url('../img/contact-section-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    padding: 4.5em 0;
+}
+
+.contact-section .car-form-link {
+    color: var(--green-fontcolor);
+}
+
+.contact-section .green-text {
+    font-size: 1em;
+    line-height: 0.9;
+}
+
+.contact-section .contact {
+    width: 30em;
+    margin: 0 auto;
+}
+
+/* About section */
+.about-section {
+    padding: 2.5em 0;
+    background-color: var(--bg-color);
+}
+
+.about-section .about-text {
+    color: #ffffff;
+    font-size: 0.8em;
+    margin: 1em 0;
+    display: block;
+}
+
+.about-section .sub-title {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.about-section .social-media a{
+  margin: 0 0.2em;
+  text-decoration: none;
+  transition:  200ms ease-in-out;
+
+}
+.about-section .social-media a:hover{
+    box-shadow: -3px 12px 9px 1px white;
+    border-radius: 50%;
+}
+/* Footer */
+.main-footer {
+    padding: 1.5em 0;
+    background-color: #D9E9E8;
+}
+/* Header 2 */
+.header-2 {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .main-header,
+    .destiners-navbar,
+    .links2 {
+        display: none;
+    }
+
+    .hero-section .workshop {
+        justify-content: center;
+    }
+
+    .tabs-btn .tab-btn {
+        display: block;
+        margin-top: 0.4em;
+    }
+    .hero-section {
+        margin-top: 2em;
+    }
+    .hero-section,
+    .cards-section {
+        padding: 1em 0;
+    }
+
+    .car-card {
+        font-size: 0.9em;
+    }
+
+    .contact-section .contact {
+        width: 100%;
+    }
+
+    .line {
+        width: 0;
+        height: 40%;
+        left: 50px;
+        top: 60%
+    }
+    .header-2{
+        display: block;
+        padding: 0.6em 0;
+        background-color: white;
+    }
+    .header-2 .logo-image {
+        height: 22px;
+    }
+    .details-section .numbers-card{
+        display: flex;
+        padding: 0;
+        align-items: end;
+        margin-top: 0;
+        margin-bottom: 1.2em;
+        justify-content: space-between;
+    }
+    .details-section .numbers-card.detail-card-1{
+        margin-top: 4em;
+    }
+    .numbers-card .numbers-text{
+        margin-left: 1.3em;
+        text-align: left;
+        width: 80%;
+
+    }
+    .details-section .circle {
+        height: 70px;
+        width: 70px;
+        line-height: 2.2;
+        font-size: 1.7em;
+        border: 6px solid rgba(42, 203, 188, 0.7);
+    }
+    .details-section .detail-heading {
+        font-size: 1.2em;
+    }
+    .details-section .detail-text{
+        font-size: 0.9em;
+    }
+    .contact-section {
+        background-image: url('../img/Contact-section-bg2.png');
+    }
+}
